@@ -1,0 +1,1 @@
+Codility reading materials (PDF)
