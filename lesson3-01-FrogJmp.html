@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Frog Jmp</title>
+</head>
+<body>
+ 
+ <script>
+ 	function solution(X, Y, D) {
+ 		let jump = Math.ceil((Y-X)/D);
+ 	
+ 		return jump;
+ 	}
+ 	/*
+ 	function solution(X, Y, D) {
+    // write your code in JavaScript (Node.js 8.9.4)
+     		let pos = X;
+ 		let jump = 0;
+ 		while(pos < Y) {
+ 			pos += D;
+ 			jump++;
+ 		}
+ 		return jump;
+    }
+    */
+    console.log(solution(50, 199, 4));//38
+ 	
+ </script>
+</body>
+</html>
