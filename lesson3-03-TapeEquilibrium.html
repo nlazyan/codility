@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TapeEquilibrium</title>
+</head>
+<body>
+
+<script>
+function getSum(total, num) {
+    return total + num;
+}
+
+function solution(A) {
+	let left = A[0];
+	let right = A.slice(1,).reduce((prev, cur) => prev + cur);
+    let min = Math.abs(left - right);
+    for(let i = 1; i < A.length -1; i++) {
+    	left +=A[i];
+   	    right -=A[i];
+    	min = Math.min(min, Math.abs(left - right));
+   }
+   	return min;
+}
+
+let A = [-3,3];//6
+console.log(solution(A));
+
+</script>
+
+</body>
+</html>
