@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FrogRiverOne</title>
+</head>
+<body>
+<script>
+function solution(X, A) {
+    // write your code in JavaScript (Node.js 8.9.4)
+    let B = A.filter((a,b) => a == b);
+    if(B.length == 0){
+    for(let i = 0; i < A.length; i++) {
+		if(A[i] >= X) return i;
+	}
+    }
+	return -1;
+}
+	let X = 5;
+	let A = [1, 3, 1, 4, 2, 3, 5, 4]
+	console.log(solution(X,A));
+</script>
+</body>
+</html>
