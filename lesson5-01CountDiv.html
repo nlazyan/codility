@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CountDiv</title>
+</head>
+<body>
+
+<script>
+/* works good, but there are problem with time complexity 
+	function solution1(A, B, K) {
+		let countDiv = 0;
+		for(let i = A; i <= B; i++) {
+			if(i % K == 0) {
+				countDiv ++;
+			}
+		}
+		return countDiv;
+	}
+*/
+// 100% 100% 100%
+	function solution(A, B, K) {
+		let countDiv = 0;
+		if( K>10 && K > A && B > K && (K-A <10 )) {
+			countDiv = Math.floor((B - (K -A - 1))/K)
+		}
+		else {
+            countDiv =  Math.floor((B - A)/K);
+        }
+
+		if(A% K == 0 || B % K == 0) countDiv++;
+		return countDiv;
+	}
+	
+	let A = 0, B = 14, K = 2; 
+	console.log(solution(A, B, K)); //8
+
+</script>
+
+</body>
+</html>
